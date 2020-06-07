@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+}
+
+.left-menu {
+    width: 200px;
+    height: 100%;
+    background-color: #4d5e70;
+    color: #fff;
+    position: absolute;
+}
+.left-menu .logo{
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    background-color: #354457;
+}
+.left-menu .logo img{
+    width: 30px;
+    height: 30px;
+}
+
+.info {
+    width: 100%;
+    padding: 10px 10px;
+    color: #b3bcc5;
+    border-bottom: 1px solid #aaa;
+}
+.info p a {
+    color: aqua;
+}
+
+.list .list-group .list-group-item{
+    background-color: #4d5e70;
+    border: none;
+    color: #b3bcc5;
+    padding-left: 30px;
+}
+.list .list-group .list-group-item.active{
+    background-color: #ddd;
+    color: #333;
+}
+.list .list-group .list-group-item.disabled{
+    padding-left: 8px;
+    font-weight: bold;
+}
+
+.rigth-content {
+    padding-left: 200px;
+    min-width: 1000px;
+}
+.rigth-content .header {
+    height: 70px;
+    background-color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.rigth-content .header .glyphicon{
+    width: 52px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+}
+.rigth-content .tab-content-item{
+    display: none;
+}
+.rigth-content .tab-content-item.active{
+    display: block;
+}
+
+.rigth-content .table-header{
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 30px;
+    color: #646987;
+    background-color: #e3ebee;
+}
+.rigth-content .table-body{
+    margin-top: 20px;
+    padding-left: 30px;
+    background-color: #fff;
+    height: 70px;
+    line-height: 70px;
+}
+.rigth-content .table-body .slide-btn{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    .wrapper .left-menu{
+        display: none;
+    }
+    .rigth-content{
+        padding: 0px;
+    }
+    .rigth-content .header .glyphicon {
+        display: block;
+    }
+}
+.wrapper .left-menu.active{
+    display: block;
+}
+.wrapper .left-menu.active + .rigth-content{
+    padding-left: 200px;
+}
